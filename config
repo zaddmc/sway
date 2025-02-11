@@ -96,7 +96,7 @@ output * bg /usr/share/backgrounds/sway/wallpapersden.com_k-the-sunset-to-aspire
     bindsym Alt+space exec $menu
 
     # Launch Firefox
-    bindsym $mod+Shift+f exec firefox
+    bindsym $mod+Shift+f exec firefox --new-tab
 
     # Audio control
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
