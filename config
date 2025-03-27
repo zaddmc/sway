@@ -3,7 +3,7 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
-xwayland enable
+xwayland enabled
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -24,12 +24,8 @@ include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#output * bg /usr/share/backgrounds/sway/wallpapersden.com_surreal-psychedelic-landscape-amazing-ai-art_3840x2160.jpg fill
-#output * bg /usr/share/backgrounds/sway/wallpapersden.com_abstract-wave-grey-duotone_2560x1435.jpg fill
-output * bg /usr/share/backgrounds/sway/wallpapersden.com_k-the-sunset-to-aspire_3840x2160.jpg fill
-
+# Wallpaper
+include ./wallpaper
 #
 # Example configuration:
 #
@@ -39,23 +35,9 @@ output * bg /usr/share/backgrounds/sway/wallpapersden.com_k-the-sunset-to-aspire
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
-#
-# Example configuration:
-#
+
    input "1267:12734:MSFT0001:00_04F3:31BE_Touchpad" {
        dwt disabled 
        tap enabled
@@ -154,9 +136,6 @@ output * bg /usr/share/backgrounds/sway/wallpapersden.com_k-the-sunset-to-aspire
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
-
-    # Browser movement
-    bindsym Control+L $left
 
 #
 # Workspaces:

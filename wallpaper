@@ -1,0 +1,8 @@
+## Wallpaper, only have one uncommented at a time
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /usr/share/backgrounds/sway/wallpapersden.com_surreal-psychedelic-landscape-amazing-ai-art_3840x2160.jpg fill
+# output * bg /usr/share/backgrounds/sway/wallpapersden.com_abstract-wave-grey-duotone_2560x1435.jpg fill
+output * bg /usr/share/backgrounds/sway/wallpapersden.com_k-the-sunset-to-aspire_3840x2160.jpg fill
+
+## Swaylock wallpaper
+bindsym $mod+Shift+i exec swaylock -i /usr/share/backgrounds/sway/wallpapersden.com_surreal-psychedelic-landscape-amazing-ai-art_3840x2160.jpg
