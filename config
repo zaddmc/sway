@@ -35,7 +35,6 @@ include ./wallpaper
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-
 ### Input configuration
 
    input "1267:12734:MSFT0001:00_04F3:31BE_Touchpad" {
@@ -69,6 +68,7 @@ include ./wallpaper
 #
     # Start a terminal
     bindsym $mod+Return exec $term fish
+    bindsym $mod+Shift+Return exec foot fish
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -77,8 +77,13 @@ include ./wallpaper
     bindsym $mod+d exec $menu
     bindsym Alt+space exec $menu
 
+    # Joke Maze
+    bindsym $mod+p exec kitty -d ~/Programming/Pathfinding-pt2/Moving_maze/ --hold sh -c "python3 main.py"
+
     # Launch Firefox
     bindsym $mod+Shift+f exec firefox --new-tab
+    bindsym $mod+m workspace number 8; exec firefox --new-window https://music.youtube.com/
+
 
     # Audio control
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -193,6 +198,7 @@ include ./wallpaper
     # Screenshot
     bindsym Print exec grim -g "$(slurp -d)" - | wl-copy
     bindsym $mod+Print exec grim -g "$(slurp - d)" $HOME/screenshots/$(date '+%y%m%d_%H-%M-%S').png
+    
 #
 # Scratchpad:
 #
