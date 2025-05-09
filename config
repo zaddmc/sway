@@ -82,7 +82,6 @@ include ./wallpaper
 
     # Launch Firefox
     bindsym $mod+Shift+f exec firefox --new-tab
-    bindsym $mod+m workspace number 8; exec firefox --new-window https://music.youtube.com/
 
 
     # Audio control
@@ -169,6 +168,7 @@ include ./wallpaper
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+    bindsym $mod+m workspace number 8; exec firefox --new-window https://music.youtube.com/
 #
 # Layout stuff:
 #
