@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+. /home/zadd/.config/sway/autotilling/venv/bin/activate
+python3 /home/zadd/.config/sway/autotilling/main.py
