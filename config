@@ -25,7 +25,7 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Wallpaper
-include ./wallpaper
+include ./wallpaper.sway
 #
 # Example configuration:
 #
@@ -168,9 +168,7 @@ include ./wallpaper
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
-    bindsym $mod+m exec /home/zadd/.config/sway/music_tab.py; workspace number 12
-
-    # exec firefox --new-window https://music.youtube.com/
+    bindsym $mod+m workspace number 12; exec $HOME/.config/sway/music_tab.py
 #
 # Layout stuff:
 #
@@ -181,7 +179,7 @@ include ./wallpaper
     bindsym $mod+v splitv
 
     # Let autotilling determine the next split direction, change path if neccesary
-    exec_always "sh /home/zadd/.config/sway/autotilling/autotilling"
+    exec_always "sh $HOME/.config/sway/autotilling/autotilling"
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
