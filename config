@@ -168,7 +168,9 @@ include ./wallpaper
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
-    bindsym $mod+m workspace number 8; exec firefox --new-window https://music.youtube.com/
+    bindsym $mod+m exec /home/zadd/.config/sway/music_tab.py; workspace number 12
+
+    # exec firefox --new-window https://music.youtube.com/
 #
 # Layout stuff:
 #
