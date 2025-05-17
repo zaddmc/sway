@@ -30,7 +30,7 @@ include ./wallpaper.sway
 # Example configuration:
 #
     output eDP-1 resolution 1920x1080
-    output HDMI-A-1 resolution 1920x1080  
+    # output HDMI-A-1 resolution 1920x1080  
     
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -81,7 +81,7 @@ include ./wallpaper.sway
     bindsym $mod+p exec kitty -d ~/Programming/Pathfinding-pt2/Moving_maze/ --hold sh -c "python3 main.py"
 
     # Launch Firefox
-    bindsym $mod+Shift+f exec firefox --new-tab
+    bindsym $mod+Shift+f exec firefox --new-window
 
 
     # Audio control
@@ -169,6 +169,12 @@ include ./wallpaper.sway
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
     bindsym $mod+m workspace number 12; exec $HOME/.config/sway/music_tab.py
+    
+    # Secondary monitor
+    workspace 18 output HDMI-A-1
+    bindsym $mod+n workspace number 18
+    bindsym $mod+Shift+n exec wl-mirror eDP-1
+
 #
 # Layout stuff:
 #
