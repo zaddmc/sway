@@ -168,12 +168,14 @@ include ./wallpaper.sway
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
     bindsym $mod+m workspace number 12; exec $HOME/.config/sway/music_tab.py
     
     # Secondary monitor
     workspace 18 output HDMI-A-1
     bindsym $mod+n workspace number 18
-    bindsym $mod+Shift+n exec wl-mirror eDP-1
+    bindsym $mod+Shift+n move container to workspace number 18
+    bindsym $mod+Control+n exec wl-mirror eDP-1
 
 #
 # Layout stuff:
